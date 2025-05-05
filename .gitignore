@@ -1,0 +1,23 @@
+# OS/system junk
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*.bak
+*.tmp
+.idea/
+.vscode/
+
+# Logs or session data
+*.log
+
+# Generated or temporary files
+*.out
+*.pdf
+*.html
+*.zip
+
+# Optional: AI output artifacts if used
+ai-output/
