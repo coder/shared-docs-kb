@@ -42,8 +42,15 @@ This document provides a high-level overview of the Coder backend, CLI, agent sy
 ### Template Architecture
 - Templates = Terraform modules with Coder extensions
 - Key custom resources:
-  - `coder_agent`, `coder_app`, `coder_script`, `coder_parameter`, `coder_metadata`
-- Versioned: Each version is immutable and linked to a provisioner job
+  - `coder_agent`: Core component that enables connectivity to workspaces
+  - `coder_app`: Provides access to web applications (IDEs, docs, etc.)
+  - `coder_parameter`: Enables user input when creating workspaces
+  - `coder_metadata`: Displays contextual information in UI
+  - Modules from Coder registry: Pre-built components (e.g., code-server, jetbrains-gateway, claude-code)
+- Resource lifecycle management:
+  - Ephemeral: Uses `count = data.coder_workspace.me.start_count` to control start/stop
+  - Persistent: Uses `lifecycle { ignore_changes = all }` to protect data
+- Versioned: Each template version is immutable and linked to a provisioner job
 
 ### Provisioning Workflow
 1. **Version upload**: Terraform code added
