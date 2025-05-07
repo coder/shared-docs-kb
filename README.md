@@ -32,7 +32,7 @@ When an issue arises, before you attempt to fix the issue, consult the Coder cod
 
 Welcome to your personal and collaborative documentation-sidecar knowledgebase. This repo is intended to assist and streamline your work on [Coder documentation](https://github.com/coder/coder), especially in collaboration with AI tools like ChatGPT and Claude Code.
 
-This directory — `coder-docs-writing/` — is meant to live alongside the `coder/` and `coder.com/` repositories within your local workspace.
+This directory — `shared-docs-kb/` — is meant to live alongside the `coder/` and `coder.com/` repositories within your local workspace.
 
 ---
 
@@ -53,7 +53,7 @@ The goal is to reduce context-switching, enforce style and consistency, and enab
 ## Structure
 
 ```text
-coder-docs-writing/
+shared-docs-kb/
 ├── README.md                      # This file
 ├── style-guide.md                # Markdown and tone/style preferences
 ├── architecture-notes.md         # Evolving notes about the Coder architecture
@@ -75,7 +75,7 @@ Documentation paths should refer to content under `../coder/docs/`. Image assets
 1. Clone the repo locally (or fork it for sandboxed edits):
 
     ```bash
-    git clone git@github.com:yourusername/coder-docs-writing.git ~/.coder-docs-writing
+    git clone git@github.com:coder/shared-docs-kb.git ~/.shared-docs-kb
     ```
 
 1. Review or contribute to the shared files:
@@ -170,4 +170,4 @@ Happy documenting — and collaborating!
 
 **Maintainer:** Edward Angert
 **Context:** Coder.com Documentation
-**Last updated:** 2025-05-06
+**Last updated:** 2025-05-07
