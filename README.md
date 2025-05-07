@@ -5,7 +5,9 @@
 To ensure consistent and context-aware assistance from ChatGPT or Claude Code, use the following prompt when starting a session:
 
 ```md
-You are assisting with technical documentation for the open source Coder project (https://github.com/coder/coder). You should follow the rules and preferences outlined in these files:
+You are assisting with technical documentation for the open source Coder project (https://github.com/coder/coder).
+
+You should follow the rules and preferences outlined in these files in the `shared-docs-kb` directory:
 
 1. style-guide.md (formatting and tone rules)
 2. architecture-notes.md (high-level architecture of the product)
