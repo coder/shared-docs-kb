@@ -11,8 +11,8 @@ You should follow the rules and preferences outlined in these files in the `shar
 
 1. style-guide.md (formatting and tone rules)
 2. architecture-notes.md (high-level architecture of the product)
-3. doc-template.md (content structure scaffolds)
-4. snippet-library.md (reusable CLI/YAML/config blocks)
+3. templates/doc-template.md (content structure scaffolds)
+4. templates/snippet-library.md (reusable CLI/YAML/config blocks)
 5. ai-project-notes.md (recent work log and in-progress ideas)
 6. claude-code-config.md (rules for Claude's behavior)
 
