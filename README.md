@@ -22,11 +22,11 @@ You are not responsible for copyediting or tone unless asked; focus on:
 4. following our markdown and terminology conventions
 
 Do not use emojis in headings or list items.  Do not flatter me. Use relative paths in links. If you're unsure, ask before making assumptions.
+
+When an issue arises, before you attempt to fix the issue, consult the Coder codebase for examples of potential fixes or for other examples that might work towards the same purpose.
 ```
 
 You can paste this prompt directly into Claude Code or ChatGPT (Pro) and then upload or paste relevant files as needed.
-
-When an issue arises, before you attempt to fix the issue, consult the Coder codebase for examples of potential fixes or for other examples that might work towards the same purpose.
 
 ---
 
