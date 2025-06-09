@@ -54,6 +54,45 @@ This is a running log of notes, observations, decisions, and refinements related
 
 ---
 
+## [Session ID: 2025-01-15-004] Combined AI Knowledge Base Approach
+**Human Contributor**: User
+**AI Assistant**: Claude (Blink)
+**Focus Area**: Repository consolidation and documentation standards
+
+### Context
+- Two separate PRs were created in this session with different approaches
+- Need to combine the best of both while maintaining strict documentation standards
+- Critical requirement: never use emojis in headings or list items
+- Focus on AI-optimized knowledge that complements official docs
+
+### Discoveries
+- Repository should provide instant AI expertise without formal training
+- Documentation standards are critical for consistency
+- Official docs at https://coder.com/docs must remain single source of truth
+- This knowledge base should complement, not duplicate official documentation
+- Emoji usage in headings is a major concern that must be prevented
+
+### Decisions Made
+- Combined both PR approaches into single coherent system
+- Enhanced style guide with critical rules section emphasizing no emojis
+- Maintained existing valuable content while improving structure
+- Created clear use cases for different scenarios (documentation writing, user support, code review)
+- Established principles: complement don't duplicate, documentation standards first, shared resource
+
+### Memory Updates
+- README.md: Completely rewritten to combine both approaches
+- style-guide.md: Enhanced with critical rules and AI guidelines
+- documentation-standards/: New directory with enhanced style guide
+- Structure: Organized around documentation standards, architecture, AI integration, and reference
+
+### Next Steps
+- Close the two separate PRs and create single combined PR
+- Ensure all files follow the documentation standards strictly
+- Test the knowledge base with AI assistants to verify effectiveness
+- Add remaining files for patterns and community knowledge as needed
+
+---
+
 ## [TEMPLATE]
 
 ## [YYYY-MM-DD] Topic or Focus
@@ -64,4 +103,4 @@ This is a running log of notes, observations, decisions, and refinements related
 
 ---
 
-_Last updated: 2025-05-06_
+_Last updated: 2025-01-15_
