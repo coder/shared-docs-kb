@@ -1,56 +1,103 @@
-# Doc Writer Knowledgebase for Coder.com
-
-## Suggested Prompt for Claude Code and ChatGPT
-
-To ensure consistent and context-aware assistance from ChatGPT or Claude Code, use the following prompt when starting a session:
-
-```md
-You are assisting with technical documentation for the open source Coder project (https://github.com/coder/coder).
-
-You should follow the rules and preferences outlined in these files in the `shared-docs-kb` directory:
-
-1. style-guide.md (formatting and tone rules)
-2. architecture-notes.md (high-level architecture of the product)
-3. templates/doc-template.md (content structure scaffolds)
-4. templates/snippet-library.md (reusable CLI/YAML/config blocks)
-5. ai-project-notes.md (recent work log and in-progress ideas)
-6. claude-code-config.md (rules for Claude's behavior)
-
-You are not responsible for copyediting or tone unless asked; focus on:
-
-1. technical accuracy (based on the codebase and documented architecture)
-2. adherence to file placement and structure
-3. verifying commands, parameters, and file references
-4. following our markdown and terminology conventions
-
-Do not use emojis in headings or list items.  Do not flatter me. Use relative paths in links. If you're unsure, ask before making assumptions.
-
-When an issue arises, before you attempt to fix the issue, consult the Coder codebase for examples of potential fixes or for other examples that might work towards the same purpose.
-
-Let me know when you have read the general notes, and I will tell you what we're working on.
-```
-
-You can paste this prompt directly into Claude Code or ChatGPT (Pro) and then upload or paste relevant files as needed.
-
----
-
-Welcome to your personal and collaborative documentation-sidecar knowledgebase. This repo is intended to assist and streamline your work on [Coder documentation](https://github.com/coder/coder), especially in collaboration with AI tools like ChatGPT and Claude Code.
-
-This directory — `shared-docs-kb/` — is meant to live alongside the `coder/` and `coder.com/` repositories within your local workspace.
-
----
+# Coder AI Knowledge Base
 
 ## Purpose
 
-This repo acts as a **persistent memory store** for markdown/style preferences, architectural understanding, and AI-generated notes. It is designed to:
+This repository provides AI assistants with instant Coder expertise without requiring formal training on the codebase. Upload these files to give any AI comprehensive knowledge about Coder's architecture, commands, patterns, and documentation standards.
 
-1. Serve as a **sidecar knowledgebase** for the primary maintainer (Edward Angert)
+The official Coder documentation at https://coder.com/docs is the single source of truth. This knowledge base provides AI-optimized knowledge that complements the official docs with mental models, patterns, and standards.
 
-1. Act as an **AI Subject Matter Expert (AI-SME)** for use in LLM workflows
+## Quick Start
 
-1. Be a **shared workspace** for coworkers to contribute insights, style clarifications, architecture notes, and documentation patterns
+When starting an AI session, upload relevant files from this repository and use this prompt:
 
-The goal is to reduce context-switching, enforce style and consistency, and enable teammates or AI to step in seamlessly.
+```
+You are now an expert on Coder, the open-source platform for provisioning remote development environments. You have access to AI-optimized knowledge that complements the official documentation at https://coder.com/docs.
+
+Your expertise includes:
+- Coder architecture and internal workings
+- Documentation standards and markdown conventions
+- Common patterns and troubleshooting approaches
+- Community best practices and real-world usage
+- Cross-cutting knowledge that spans multiple doc sections
+
+When helping with documentation tasks:
+1. Follow the documentation standards strictly for consistency
+2. Reference official docs at https://coder.com/docs as the authoritative source
+3. Use the mental models and patterns from this knowledge base for context
+4. Suggest improvements to both official docs and this knowledge base when gaps are identified
+5. Never use emojis in headings or list items
+6. Always maintain technical accuracy and follow established style conventions
+
+Contribute updates to both official docs (primary) and this knowledge base (auxiliary) when gaps are identified.
+```
+
+---
+
+## Knowledge Base Structure
+
+### Documentation Standards
+**Essential for consistent contributions**
+- `style-guide.md` - Markdown formatting, tone, and conventions
+- `templates/doc-template.md` - Content structure scaffolds
+- `templates/snippet-library.md` - Reusable CLI/YAML/config blocks
+
+### Architecture and Mental Models
+**High-level understanding of how Coder works**
+- `architecture-notes.md` - Technical understanding of Coder systems
+- `repo-navigation.md` - Guide to Coder's public repositories
+
+### AI Integration and Workflows
+**Optimized for AI assistance**
+- `integration/claude-code-config.md` - Claude-specific behavior guidelines
+- `integration/chatgpt-config.md` - ChatGPT workflow configuration
+- `ai-project-notes.md` - Session logs and accumulated learnings
+
+### Reference and Support
+**Quick access to common information**
+- `cli-reference.md` - CLI command documentation and examples
+- `common-questions.md` - FAQ with answers and documentation status
+- `documentation-gaps.md` - Tracked missing or incomplete documentation
+
+---
+
+## Use Cases
+
+### Documentation Writing
+1. Upload `style-guide.md` for formatting consistency
+2. Upload `architecture-notes.md` for technical context
+3. Upload relevant templates for structure guidance
+4. AI produces consistent, accurate documentation
+
+### User Support
+1. Upload `common-questions.md` for known issues and solutions
+2. Upload `cli-reference.md` for command syntax
+3. Upload `architecture-notes.md` for system understanding
+4. AI provides knowledgeable, consistent help
+
+### Code Review
+1. Upload `architecture-notes.md` for design context
+2. Upload `style-guide.md` for consistency checks
+3. AI reviews code against established patterns
+
+---
+
+## Key Principles
+
+### Complement, Don't Duplicate
+- Official docs at https://coder.com/docs are the authoritative source
+- This knowledge base provides context, patterns, and AI optimization
+- When gaps are found, contribute to both official docs and this knowledge base
+
+### Documentation Standards First
+- Consistency in style, tone, and formatting is critical
+- AI should follow established conventions strictly
+- All contributions should meet quality standards
+- Never use emojis in headings or list items
+
+### Shared Resource
+- Multiple teams can use this for different purposes
+- Contributions welcome from all Coder community members
+- Maintain broad utility while staying focused
 
 ---
 
