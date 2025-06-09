@@ -1,6 +1,8 @@
-# Coder CLI Reference
+# Coder CLI Reference Guide
 
-Comprehensive reference for Coder CLI commands, organized by use case. This serves as the AI's primary source for CLI-related questions.
+Quick reference guide for Coder CLI commands with links to official documentation. This helps AI assistants quickly find and reference the correct official documentation at https://coder.com/docs.
+
+**Note**: This is a reference guide, not the source of truth. Always link to official documentation at https://coder.com/docs for complete information.
 
 ---
 
@@ -14,23 +16,19 @@ coder templates
 
 ### `coder templates create`
 Create a new template from a directory
+
+**Official Documentation**: https://coder.com/docs/templates/creating-templates
+
+**Quick Reference**:
 ```bash
 coder templates create [template-name] [source-directory]
 
-# Create from current directory
+# Examples (verify syntax at official docs):
 coder templates create my-template .
-
-# Create from GitHub repository
 coder templates create my-template https://github.com/user/repo
-
-# Create from specific branch/tag
-coder templates create my-template https://github.com/user/repo --ref main
 ```
 
-**Common Options:**
-- `--ref <branch>` - Specify Git branch, tag, or commit
-- `--directory <path>` - Subdirectory within the repository
-- `--variables-file <file>` - File containing template variables
+**Note**: For complete syntax and all options, see the official CLI reference at https://coder.com/docs
 
 ### `coder templates pull`
 Update template from source

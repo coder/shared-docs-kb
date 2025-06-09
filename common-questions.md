@@ -1,25 +1,19 @@
-# Common Questions & Answers
+# Common Questions Reference
 
-This file tracks frequently asked questions about Coder, their answers, and whether the information exists in the official documentation.
+This file tracks frequently asked questions about Coder and maps them to official documentation at https://coder.com/docs. When information is missing from official docs, we track it as a contribution opportunity.
+
+**Purpose**: Help AI assistants quickly find the right official documentation to reference when answering questions.
 
 ---
 
 ## CLI Questions
 
 ### Q: "What option do I use with coder cli to copy a template from a github repo?"
-**Answer**: Use `coder templates create` with the GitHub URL:
-```bash
-coder templates create my-template https://github.com/user/repo
-
-# For specific subdirectory:
-coder templates create my-template https://github.com/user/repo --directory path/to/template
-
-# For specific branch/tag:
-coder templates create my-template https://github.com/user/repo --ref main
-```
-
-**Documentation Status**: ❌ Missing from official docs  
-**Suggested Location**: `/docs/templates/creating-templates.md`  
+**Official Documentation**: https://coder.com/docs/templates/creating-templates  
+**Quick Answer**: `coder templates create my-template https://github.com/user/repo`  
+**Documentation Status**: ❌ GitHub template creation not clearly documented  
+**Gap**: Official docs don't clearly show GitHub repo usage  
+**Suggested Enhancement**: Add GitHub examples to existing template creation docs  
 **Priority**: High (very common question)
 
 ### Q: "How do I update a template from its GitHub source?"
