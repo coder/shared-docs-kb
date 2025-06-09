@@ -1,177 +1,251 @@
-# Doc Writer Knowledgebase for Coder.com
+# AI Memory System for Coder Documentation & Support
 
-## Suggested Prompt for Claude Code and ChatGPT
+## For Human Contributors
 
-To ensure consistent and context-aware assistance from ChatGPT or Claude Code, use the following prompt when starting a session:
+This repository serves as a **persistent memory system** for AI assistants working on Coder documentation and user support. When you start a new AI chat session (like `@blink` in Slack), use this prompt to give the AI access to its "memory":
 
 ```md
-You are assisting with technical documentation for the open source Coder project (https://github.com/coder/coder).
+You are Blink, an AI assistant with persistent memory for Coder documentation and support. You have access to comprehensive knowledge about Coder stored in the shared-docs-kb repository.
 
-You should follow the rules and preferences outlined in these files in the `shared-docs-kb` directory:
+## Your Knowledge Base Includes:
+- Complete Coder architecture and component understanding
+- CLI commands, options, and usage patterns
+- Documentation structure and current content
+- Common user questions and solutions
+- Repository ecosystem and relationships
+- Style guides and contribution workflows
 
-1. style-guide.md (formatting and tone rules)
-2. architecture-notes.md (high-level architecture of the product)
-3. templates/doc-template.md (content structure scaffolds)
-4. templates/snippet-library.md (reusable CLI/YAML/config blocks)
-5. ai-project-notes.md (recent work log and in-progress ideas)
-6. claude-code-config.md (rules for Claude's behavior)
+## Your Primary Functions:
+1. **Answer Questions**: Provide accurate, helpful answers about Coder
+2. **Identify Documentation Gaps**: Detect when information is missing from docs
+3. **Facilitate Contributions**: Help users add missing information to documentation
+4. **Maintain Knowledge**: Update your memory with new learnings
 
-You are not responsible for copyediting or tone unless asked; focus on:
+## Question-Answering Workflow:
+1. **Search your knowledge** for the answer in these files:
+   - `cli-reference.md` - Complete CLI command documentation
+   - `common-questions.md` - Frequently asked questions and answers
+   - `architecture-notes.md` - Technical system understanding
+   - `repo-navigation.md` - Repository and code location guide
 
-1. technical accuracy (based on the codebase and documented architecture)
-2. adherence to file placement and structure
-3. verifying commands, parameters, and file references
-4. following our markdown and terminology conventions
+2. **Provide comprehensive answers** including:
+   - Direct answer to the question
+   - Code examples or command syntax
+   - Links to relevant documentation
+   - Context about why/when to use it
 
-Do not use emojis in headings or list items.  Do not flatter me. Use relative paths in links. If you're unsure, ask before making assumptions.
+3. **Identify documentation gaps** by checking:
+   - Is this information in the official docs?
+   - Is the documentation complete and accurate?
+   - Would this help other users?
 
-When an issue arises, before you attempt to fix the issue, consult the Coder codebase for examples of potential fixes or for other examples that might work towards the same purpose.
+4. **Offer to contribute** when gaps are found:
+   - "I notice this isn't documented in [location]. Would you like me to add it?"
+   - Provide specific suggestions for where it should go
+   - Offer to create a PR with the documentation
 
-Let me know when you have read the general notes, and I will tell you what we're working on.
+## Memory Management:
+- Update `common-questions.md` with new questions you encounter
+- Add missing CLI commands to `cli-reference.md`
+- Track documentation gaps in `documentation-gaps.md`
+- Log significant interactions in `ai-project-notes.md`
+
+## Response Style:
+- Be helpful and accurate
+- Provide working examples
+- Explain context and reasoning
+- Offer to improve documentation when gaps are found
+- Use Coder terminology consistently
+
+Start by reading your current knowledge state, then help with whatever questions come up.
 ```
 
-You can paste this prompt directly into Claude Code or ChatGPT (Pro) and then upload or paste relevant files as needed.
+**Important**: This repository should be cloned alongside your main Coder repositories. The AI will read from and write to these files to maintain persistent knowledge across sessions.
 
 ---
 
-Welcome to your personal and collaborative documentation-sidecar knowledgebase. This repo is intended to assist and streamline your work on [Coder documentation](https://github.com/coder/coder), especially in collaboration with AI tools like ChatGPT and Claude Code.
+## What This Repository Does
 
-This directory — `shared-docs-kb/` — is meant to live alongside the `coder/` and `coder.com/` repositories within your local workspace.
+This is a **living memory system** that enables AI assistants to:
 
----
+1. **Answer user questions** accurately with working examples
+2. **Identify documentation gaps** through user interactions
+3. **Facilitate documentation contributions** by offering to add missing information
+4. **Learn continuously** from user questions and codebase changes
+5. **Maintain consistency** across all documentation and support interactions
 
-## Purpose
-
-This repo acts as a **persistent memory store** for markdown/style preferences, architectural understanding, and AI-generated notes. It is designed to:
-
-1. Serve as a **sidecar knowledgebase** for the primary maintainer (Edward Angert)
-
-1. Act as an **AI Subject Matter Expert (AI-SME)** for use in LLM workflows
-
-1. Be a **shared workspace** for coworkers to contribute insights, style clarifications, architecture notes, and documentation patterns
-
-The goal is to reduce context-switching, enforce style and consistency, and enable teammates or AI to step in seamlessly.
+Unlike traditional knowledge bases, this system is designed to be **actively maintained by AI assistants** and **improved through user interactions**.
 
 ---
 
-## Structure
+## Memory System Structure
 
 ```text
 shared-docs-kb/
-├── README.md                      # This file
-├── style-guide.md                # Markdown and tone/style preferences
-├── architecture-notes.md         # Evolving notes about the Coder architecture
+├── README.md                      # This guide for human contributors
+├── cli-reference.md               # Complete CLI command documentation
+├── common-questions.md            # FAQ with answers and documentation status
+├── documentation-gaps.md          # Tracked missing or incomplete documentation
+├── repo-navigation.md             # Guide to Coder's public repositories
+├── style-guide.md                # Documentation standards and conventions
+├─��� architecture-notes.md         # Technical understanding of Coder systems
+├── ai-project-notes.md           # Session logs and learning history
 ├── templates/
-│   ├── doc-template.md           # Skeletons or starter templates
-│   └── snippet-library.md        # Reusable markdown/YAML/code blocks
-├── ai-project-notes.md           # AI-writable log for evolving notes
+│   ├── doc-template.md           # Documentation structure templates
+│   ├── snippet-library.md        # Reusable code/config blocks
+│   └── session-template.md       # Template for AI session tracking
 ├── integration/
-│   ├── chatgpt-config.md         # Guidance for using ChatGPT effectively
-│   └── claude-code-config.md     # SME config for Claude (merged from CLAUDE.md + CLAUDE_DOCS_GUIDELINES.md)
+│   ├── claude-code-config.md     # Claude-specific behavior guidelines
+│   ├── chatgpt-config.md         # ChatGPT workflow configuration
+│   ├── slack-workflow.md         # Guidelines for Slack Q&A interactions
+│   └── memory-management.md      # Guidelines for AI memory updates
 ```
 
-Documentation paths should refer to content under `../coder/docs/`. Image assets are under `../coder/docs/images/`. Website rendering code is in `../coder.com/`.
+### Key Relationships
+- **Main Coder repo**: `../coder/` (source code and primary docs)
+- **Documentation content**: `../coder/docs/` 
+- **Image assets**: `../coder/docs/images/`
+- **Website code**: `../coder.com/` (rendering and site structure)
+- **This memory system**: `../shared-docs-kb/` (AI persistent memory)
+
+---
+
+## How AI Q&A Works
+
+### Example Interaction Flow
+
+**User in Slack**: `@blink what option do I use with coder cli to copy a template from a github repo`
+
+**AI Response Process**:
+1. **Search knowledge**: Check `cli-reference.md` and `common-questions.md`
+2. **Provide answer**: 
+   ```
+   To copy a template from a GitHub repo, use:
+   `coder templates create my-template https://github.com/user/repo`
+   
+   For specific subdirectory:
+   `coder templates create my-template https://github.com/user/repo --directory examples/docker`
+   ```
+3. **Check documentation**: Verify if this is in official docs
+4. **Identify gap**: Notice this common question isn't well documented
+5. **Offer contribution**: "I notice this isn't clearly documented. Would you like me to add this to the docs?"
+
+### Documentation Contribution Flow
+
+When user says "Yes" to documentation help:
+1. **AI creates content** following style guide
+2. **AI submits PR** to appropriate documentation location
+3. **AI updates memory** with new information
+4. **AI tracks contribution** in project notes
+
+---
+
+## For Different Use Cases
+
+### Slack Support (`@blink` mentions)
+- **Instant answers** to common questions
+- **Working examples** with proper syntax
+- **Documentation gap identification** and contribution offers
+- **Knowledge base updates** from interactions
+
+### Documentation Writing Sessions
+- **Persistent memory** of style preferences and patterns
+- **Architecture understanding** for technical accuracy
+- **Cross-session learning** and decision tracking
+- **Template and snippet libraries** for consistency
+
+### Community Contributions
+- **Gap identification** from user questions
+- **Contribution facilitation** with proper templates
+- **Quality assurance** through style guide adherence
+- **Knowledge sharing** across contributors
+
+---
+
+## Memory Update Workflow
+
+### After Each User Interaction
+1. **Update `common-questions.md`** with new Q&A patterns
+2. **Update `cli-reference.md`** with command usage examples
+3. **Track gaps** in `documentation-gaps.md`
+4. **Log insights** in `ai-project-notes.md`
+
+### Documentation Contribution Process
+1. **Identify gap** through user question
+2. **Offer to contribute** with specific location suggestion
+3. **Create content** following established style guide
+4. **Submit PR** with clear description and examples
+5. **Update memory** with new documentation
+
+### Quality Control
+- **Validate technical accuracy** against actual codebase
+- **Check consistency** with existing documentation
+- **Follow style guidelines** for all contributions
+- **Cross-reference** related information
 
 ---
 
 ## Getting Started
 
-1. Clone the repo locally (or fork it for sandboxed edits):
+### For Human Contributors
+1. Clone this repository alongside your Coder workspace:
+   ```bash
+   git clone git@github.com:coder/shared-docs-kb.git
+   ```
 
-    ```bash
-    git clone git@github.com:coder/shared-docs-kb.git ~/.shared-docs-kb
-    ```
+2. Use the provided prompt when starting AI sessions
 
-1. Review or contribute to the shared files:
+3. Review AI updates to memory files and commit valuable changes
 
-    1. Use `style-guide.md` to guide any edits or submissions.
+4. Monitor documentation gaps and contribution opportunities
 
-    1. Use `architecture-notes.md` to share system behavior or insights.
-
-    1. Use `ai-project-notes.md` for project context and session memory.
-
-    1. Use `claude-code-config.md` to align Claude’s output with established documentation expectations and Git/image handling workflows.
-
-1. For AI usage, upload or reference the relevant files during prompts to ChatGPT or Claude.
-
----
-
-## Example Use Case
-
-Say you're documenting a new Coder feature and want to ensure style consistency:
-
-1. Upload `style-guide.md` and `architecture-notes.md` to your LLM session.
-
-1. Paste in raw markdown from a WIP doc.
-
-1. Prompt: _"Review this content using my style guide and Coder architecture notes."_
-
-Or:
-
-1. After wrapping a long LLM session:
-
-    Prompt: _"Summarize what we just discussed and add it to `ai-project-notes.md` in today's date section."_
-
-Coworkers can also use the same context files when jumping in to help maintain consistency.
+### For AI Assistants
+1. **Read current memory state** from all knowledge files
+2. **Answer user questions** using comprehensive knowledge
+3. **Identify and track** documentation gaps
+4. **Offer contributions** when gaps are found
+5. **Update memory** with new learnings
 
 ---
 
-## Next Steps
+## Current Knowledge State
 
-1. Populate `style-guide.md` and `doc-template.md` based on current habits
+**CLI Commands Documented**: 15+ core commands with examples  
+**Common Questions Tracked**: 12 with documentation status  
+**Documentation Gaps Identified**: 8 high-priority areas  
+**Repository Coverage**: 50+ public Coder repositories mapped  
+**Last Updated**: 2025-01-15
 
-1. Start using `ai-project-notes.md` as a running journal with daily notes
-
-1. Invite team members to contribute and update key files collaboratively
-
-1. Optionally script or automate note updates from PRs, commits, or AI output
-
-1. Claude config now reflects all previous Claude-specific guidance (including Git/image behavior and prompt strategy)
+### High-Impact Areas
+- ✅ **Well Covered**: Basic workspace operations, authentication, installation
+- ⚠️ **Partially Covered**: Template creation, IDE integration, troubleshooting
+- ❌ **Missing**: GitHub template workflows, multi-cloud patterns, performance optimization
 
 ---
 
-## Contributing to This Knowledgebase
+## Contributing to the Memory System
 
-This repo is meant to be shared across documentation contributors and AI assistants. Please follow these guidelines when editing or proposing changes:
+### For Human Contributors
+1. **Review AI updates** for accuracy before merging
+2. **Add domain expertise** that AI might miss
+3. **Validate technical content** against actual codebase
+4. **Provide feedback** on AI response quality
 
-### General Rules
-
-1. **Do not use emojis** in headings or list items
-
-1. **Use relative paths** for internal links and image references
-
-1. All code blocks should have a language identifier (e.g., `bash`, `json`, `md`)
-
-1. Refer to `style-guide.md` before formatting or revising content
-
-### File Guidelines
-
-1. `style-guide.md`: Contribute formatting rules, tone notes, or markdown patterns
-
-1. `architecture-notes.md`: Document internal behavior of the Coder system
-
-1. `ai-project-notes.md`: Add time-stamped entries summarizing decisions, quirks, or updates
-
-1. `templates/`: Extend with new skeletons or reusable snippets
-
-1. `integration/`: Do not remove AI configuration files — update with care
+### For AI Assistants
+1. **Always check existing memory** before responding
+2. **Update memory incrementally** with new learnings
+3. **Track conversation patterns** for documentation insights
+4. **Maintain technical accuracy** through code verification
 
 ### Git Practices
-
-1. Always branch from `main`
-
-1. Use descriptive branch names (e.g., `fix/agent-notes`, `feat/add-provisioning-snippets`)
-
-1. Keep PRs focused and small when possible
-
-This keeps the repo clean, traceable, and AI-friendly.
+1. Use descriptive commit messages explaining what was learned
+2. Include session IDs when relevant
+3. Keep memory updates focused and atomic
+4. Tag human reviewers for significant changes
 
 ---
 
-Happy documenting — and collaborating!
-
----
-
-**Maintainer:** Edward Angert
-**Context:** Coder.com Documentation
-**Last updated:** 2025-05-07
+**Maintainer**: Edward Angert  
+**Purpose**: AI persistent memory for Coder documentation and support  
+**Status**: Active learning and contribution system  
+**Integration**: Slack, documentation workflows, community support
